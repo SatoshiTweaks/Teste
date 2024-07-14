@@ -2,7 +2,7 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHept
 
 
 function Script()
-    local Window = Library.CreateLib("SatoshiHubbb", "Synapse")
+    local Window = Library.CreateLib("Satoshi", "Synapse")
 
 
 
