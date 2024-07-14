@@ -42,7 +42,7 @@ function Script()
     local CreditsSection = Credits:NewSection("Credits")
 
 
-    CreditsSection:NewLabel("Created by Falxe")
+    CreditsSection:NewLabel("By satoshi tweaks")
     
 
 
