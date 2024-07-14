@@ -1,0 +1,54 @@
+-- Create a ScreenGui
+local gui = Instance.new("ScreenGui")
+gui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+-- Create UI elements
+local frame = Instance.new("Frame")
+frame.Size = UDim2.new(0, 200, 0, 80)
+frame.Position = UDim2.new(0, 10, 0, 10)
+frame.BackgroundColor3 = Color3.new(0, 0, 0)
+frame.BackgroundTransparency = 0.5
+frame.Active = true  -- Allow user input on the frame
+frame.Draggable = true  -- Make the frame draggable
+frame.Parent = gui
+
+local plusSpeedButton = Instance.new("TextButton")
+plusSpeedButton.Size = UDim2.new(0, 80, 0, 30)
+plusSpeedButton.Position = UDim2.new(0, 10, 0, 10)
+plusSpeedButton.Text = "+ Speed"
+plusSpeedButton.Parent = frame
+
+local minusSpeedButton = Instance.new("TextButton")
+minusSpeedButton.Size = UDim2.new(0, 80, 0, 30)
+minusSpeedButton.Position = UDim2.new(0, 110, 0, 10)
+minusSpeedButton.Text = "- Speed"
+minusSpeedButton.Parent = frame
+
+local speedTextLabel = Instance.new("TextLabel")
+speedTextLabel.Size = UDim2.new(0, 100, 0, 30)
+speedTextLabel.Position = UDim2.new(0, 10, 0, 50)
+speedTextLabel.Text = "Speed: 16"
+speedTextLabel.Parent = frame
+
+-- Variable
+local speed = 16  -- Default WalkSpeed value
+
+-- Functions
+local function updateSpeedLabel()
+    speedTextLabel.Text = "Speed: " .. tostring(speed)
+end
+
+-- Connect button events
+plusSpeedButton.MouseButton1Click:Connect(function()
+    speed = speed + 50
+    game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid").WalkSpeed = speed
+    updateSpeedLabel()
+end)
+
+minusSpeedButton.MouseButton1Click:Connect(function()
+    if speed >= 50 then
+        speed = speed - 50
+        game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid").WalkSpeed = speed
+        updateSpeedLabel()
+    end
+end)
