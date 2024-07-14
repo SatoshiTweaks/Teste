@@ -1,4 +1,4 @@
-local SatoshiHub = loadstring(game:HttpGet("https://github.com/SatoshiTweaks/Teste/new/main"))();
+
 local window = SatoshiHub.CreateLib("Main Title","BloodTheme")
 
 ---Tabs
