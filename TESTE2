@@ -1,19 +1,5 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/SatoshiTweaks/satoshi-ui/main/satoshiiiii-ui"))()
 
-Rayfield:Notify({
-   Title = "Notification Title",
-   Content = "Notification Content",
-   Duration = 6.5,
-   Image = 4483362458,
-   Actions = { -- Notification Buttons
-      Ignore = {
-         Name = "Okay!",
-         Callback = function()
-         print("The user tapped Okay!")
-      end
-   },
-},
-})
 
 function Script()
     local Window = Library.CreateLib("SatoshiHubbb", "Synapse")
