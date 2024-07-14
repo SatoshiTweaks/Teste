@@ -16,7 +16,7 @@ Rayfield:Notify({
 })
 
 function Script()
-    local Window = Library.CreateLib("SatoshiHub", "Synapse")
+    local Window = Library.CreateLib("SatoshiHubbb", "Synapse")
 
 
 
