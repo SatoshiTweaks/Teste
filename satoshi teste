@@ -1,5 +1,13 @@
-local player = game.Players.LocalPlayer
-local character = player.Character or player.CharacterAdded:Wait()
-local humanoid = character:WaitForChild("Humanoid")
- 
-humanoid.WalkSpeed = 200
+local SatoshiHub = loadstring(game:HttpGet("https://github.com/SatoshiTweaks/Teste/edit/main/satoshi%20teste"))();
+local window = SatoshiHub.CreateLib("Main Title","BloodTheme")
+
+---Tabs
+
+local Tab1 = window:NewTab("Main")
+local Tab1Section = Tab1:NeeSection("Main")
+
+---Buttons
+
+Tab1Section:NewButton("Write Name Of Script - Hitbox","Write what it do - Increase Range")function()
+
+end)
